@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icy Couture Lara Store</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #A9D6E5;
+            color: white;
+        }
+        header {
+            background: #4A6FA5;
+            padding: 15px;
+            font-size: 24px;
+        }
+        #products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .product {
+            background: white;
+            color: black;
+            border: 1px solid #ddd;
+            padding: 15px;
+            width: 200px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        select {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #218838;
+        }
+        aside {
+            margin-top: 20px;
+            padding: 10px;
+            background: white;
+            color: black;
+            width: 300px;
+            margin: auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        #cancel-button {
+            display: none;
+            background: red;
+        }
+        .social-media {
+            margin-top: 20px;
+        }
+        .social-media a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .whatsapp {
+            background: #25d366;
+        }
+        .instagram {
+            background: #e4405f;
+        }
+        .email {
+            background: #0073e6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Icy Couture Lara Store</h1>
+        
+    </header>
+    <main>
+        <section id="products">
+            <div class="product" data-name="T-Shirt Oversize" data-price="150000" data-stock="5">
+                <img src="baju polos.jpeg" alt="baju polos.jpeg">
+                <h2>T-Shirt Polos</h2>
+                <p>Rp100.000</p>
+                <label>Ukuran:
+                    <select>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+                </label>
+                <label>Warna:
+                    <select>
+                        <option>Biru</option>
+                        <option>Hitam</option>
+                        <option>Putih</option>
+                        <option>Abu-abu</option>
+                    </select>
+                </label>
+                <p>Stok: <span class="stock">100</span></p>
+                <button onclick="addToCart(this)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product" data-name="T-Shirt Oversize" data-price="150000" data-stock="5">
+                <img src="jaket kulit.jpeg" alt="jaket kulit.jpeg">
+                <h2>Jaket Kulit</h2>
+                <p>Rp450.000</p>
+                <label>Ukuran:
+                    <select>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+                </label>
+                <label>Warna:
+                    <select>
+                        <option>Hitam</option>
+                        <option>Coklat</option>
+                        <option>Abu-abu</option>
+                    </select>
+                </label>
+                <p>Stok: <span class="stock">100</span></p>
+                <button onclick="addToCart(this)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product" data-name="T-Shirt Oversize" data-price="150000" data-stock="5">
+                <img src="hoodie polos.jpeg" alt="hoodie polos.jpeg">
+                <h2>Hoodie Polos</h2>
+                <p>Rp120.000</p>
+                <label>Ukuran:
+                    <select>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+                </label>
+                <label>Warna:
+                    <select>
+                        <option>Biru</option>
+                        <option>Hitam</option>
+                        <option>Putih</option>
+                        <option>Abu-abu</option>
+                    </select>
+                </label>
+                <p>Stok: <span class="stock">100</span></p>
+                <button onclick="addToCart(this)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product" data-name="T-Shirt Oversize" data-price="150000" data-stock="5">
+                <img src="celana biker.jpg" alt="T-Shirt Oversize">
+                <h2>Celana Biker</h2>
+                <p>Rp90.000</p>
+                <label>Ukuran:
+                    <select>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+                </label>
+                <label>Warna:
+                    <select>
+                        <option>Abu-abu</option>
+                        <option>Putih</option>
+                        <option>Hitam</option>
+                    </select>
+                </label>
+                <p>Stok: <span class="stock">100</span></p>
+                <button onclick="addToCart(this)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product" data-name="T-Shirt Oversize" data-price="150000" data-stock="5">
+                <img src="gesper.jpeg" alt="T-Shirt Oversize">
+                <h2>Ikat Pinggang</h2>
+                <p>Rp75.000</p>
+                <label>Ukuran:
+                    <select>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+                </label>
+                <label>Warna:
+                    <select>
+                        <option>Coklat</option>
+                        <option>Hitam</option>
+                        <option>Putih</option>
+                        <option>Abu-abu</option>
+                    </select>
+                </label>
+                <p>Stok: <span class="stock">100</span></p>
+                <button onclick="addToCart(this)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product" data-name="T-Shirt Oversize" data-price="150000" data-stock="5">
+                <img src="nike air.jpeg" alt="T-Shirt Oversize">
+                <h2>Sepatu Sneakers</h2>
+                <p>Rp5.500.000</p>
+                <label>Ukuran:
+                    <select>
+                        <option>38</option>
+                        <option>39</option>
+                        <option>40</option>
+                        <option>41</option>
+                    </select>
+                </label>
+                <label>Warna:
+                    <select>
+                        <option>Ungu</option>
+                        <option>Hitam</option>
+                        <option>Putih</option>
+                        <option>Abu-abu</option>
+                    </select>
+                </label>
+                <p>Stok: <span class="stock">100</span></p>
+                <button onclick="addToCart(this)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product" data-name="T-Shirt Oversize" data-price="150000" data-stock="5">
+                <img src="celana jeans.jpeg" alt="T-Shirt Oversize">
+                <h2>Celana Jeans</h2>
+                <p>Rp110.000</p>
+                <label>Ukuran:
+                    <select>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+                </label>
+                <label>Warna:
+                    <select>
+                        <option>Biru</option>
+                        <option>Hitam</option>
+                        <option>Putih</option>
+                        <option>Abu-abu</option>
+                    </select>
+                </label>
+                <p>Stok: <span class="stock">100</span></p>
+                <button onclick="addToCart(this)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product" data-name="T-Shirt Oversize" data-price="150000" data-stock="5">
+                <img src="rompi strip polos.jpeg" alt="T-Shirt Oversize">
+                <h2>T-Shirt Oversize</h2>
+                <p>Rp165.000</p>
+                <label>Ukuran:
+                    <select>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+                </label>
+                <label>Warna:
+                    <select>
+                        <option>Navy</option>
+                        <option>Hitam</option>
+                        <option>Putih</option>
+                        <option>Abu-abu</option>
+                    </select>
+                </label>
+                <p>Stok: <span class="stock">100</span></p>
+                <button onclick="addToCart(this)">Tambah ke Keranjang</button>
+            </div>
+        </section>
+    </main>
+    <aside>
+        <h2>Keranjang</h2>
+        <ul id="cart-list"></ul>
+        <p>Total: <span id="total-price">Rp0</span></p>
+        <button onclick="checkout()">Checkout</button>
+        <button id="cancel-button" onclick="cancelOrder()">Batalkan Pesanan</button>
+    </aside>
+    <div class="social-media">
+        <a href="https://wa.me/62895326897458" class="whatsapp">WhatsApp</a>
+        <a href="https://instagram.com/yourstore" class="instagram">Instagram</a>
+        <a href="mailto:yourstore@email.com" class="email">Email</a>
+    </div>
+    <script>
+        let cart = [];
+
+        function addToCart(button) {
+            let product = button.parentElement;
+            let name = product.getAttribute('data-name');
+            let price = parseInt(product.getAttribute('data-price'));
+            let stockElement = product.querySelector(".stock");
+            let stock = parseInt(stockElement.textContent);
+            let size = product.querySelectorAll("select")[0].value;
+            let color = product.querySelectorAll("select")[1].value;
+
+            if (stock > 0) {
+                cart.push({ name, price, size, color });
+                stockElement.textContent = stock - 1;
+                updateCart();
+            } else {
+                alert("Stok habis!");
+            }
+        }
+
+        function updateCart() {
+            let cartList = document.getElementById('cart-list');
+            let totalPrice = document.getElementById('total-price');
+            let cancelButton = document.getElementById('cancel-button');
+            
+            cartList.innerHTML = '';
+            let total = 0;
+            cart.forEach(item => {
+                let li = document.createElement('li');
+                li.textContent = `${item.name} - ${item.size} - ${item.color} - Rp${item.price}`;
+                cartList.appendChild(li);
+                total += item.price;
+            });
+            totalPrice.textContent = `Rp${total}`;
+            cancelButton.style.display = cart.length > 0 ? 'inline-block' : 'none';
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert("Keranjang belanja kosong!");
+                return;
+            }
+            let message = "Halo, saya ingin membeli:\n";
+            cart.forEach(item => {
+                message += `- ${item.name} (${item.size}, ${item.color}) seharga Rp${item.price}\n`;
+            });
+            let waNumber = "62895326897458";
+            let url = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+
+        function cancelOrder() {
+            cart = [];
+            document.querySelectorAll(".stock").forEach(el => el.textContent = el.getAttribute("data-stock"));
+            updateCart();
+            alert("Pesanan telah dibatalkan.");
+        }
+    </script>
+</body>
+</html>
